@@ -573,6 +573,8 @@
           emotions: [
             // 10 Core
             { id: 'anxious', en: 'Anxious', zh: '焦慮' },
+            { id: 'fearful', en: 'Fearful', zh: '恐懼' },
+            { id: 'afraid', en: 'Scared / Afraid', zh: '害怕' },
             { id: 'overwhelmed', en: 'Overwhelmed', zh: '不知所措' },
             { id: 'pressured', en: 'Pressured', zh: '備感壓力' },
             { id: 'frustrated', en: 'Frustrated', zh: '挫敗煩躁' },
@@ -580,9 +582,8 @@
             { id: 'defensive', en: 'Defensive', zh: '防備' },
             { id: 'resentful', en: 'Resentful', zh: '委屈憤懣' },
             { id: 'worried', en: 'Worried', zh: '擔憂' },
-            { id: 'embarrassed', en: 'Embarrassed', zh: '尷尬' },
-            { id: 'afraid', en: 'Afraid', zh: '害怕' },
             // Extended (from curated list)
+            { id: 'embarrassed', en: 'Embarrassed', zh: '尷尬' },
             { id: 'panic', en: 'Panic', zh: '恐慌' },
             { id: 'nervous', en: 'Nervous', zh: '緊張' },
             { id: 'concerned', en: 'Concerned', zh: '掛心' },
@@ -854,6 +855,7 @@
       ],
       microQuickEmotions: [
         { id: 'anxious', en: 'Anxious', zh: '焦慮' },
+        { id: 'fearful', en: 'Fearful / Scared', zh: '害怕恐懼' },
         { id: 'time_pressured', en: 'Time-pressured', zh: '時間緊迫' },
         { id: 'frustrated', en: 'Frustrated', zh: '挫敗煩躁' },
         { id: 'disappointed', en: 'Disappointed', zh: '失落' },
@@ -954,6 +956,8 @@
         const found = q.emotions.find(e => e.id === id);
         if (found) return found[state.lang];
       }
+      const mq = DATA.microQuickEmotions.find(e => e.id === id);
+      if (mq) return mq[state.lang];
       return id;
     }
 
