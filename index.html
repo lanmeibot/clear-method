@@ -237,6 +237,7 @@
           storyHint: 'What meaning, motive, or prediction is my mind adding?',
           storyPlaceholder: 'e.g., They are upset with me or ignoring my work.',
           bucketsTitle: '10 Unhelpful Thinking Styles',
+          bucketsIntro: 'Thoughts are often habits, not facts. Spotting a common thinking pattern doesn’t mean your feelings aren’t valid—it simply creates a little breathing room between what happened and what the mind adds.',
           bucketsSub: 'Tap any illustrated card to select it and view its explanation & example.',
           spotlightHint: 'Tap any card above to inspect its explanation and everyday example.',
           orDivider: 'or',
@@ -392,6 +393,7 @@
           storyHint: '大腦在事實之外，加上了什麼推論、評價或預測？',
           storyPlaceholder: '例如：對方一定對我不滿，或故意忽視我的工作。',
           bucketsTitle: '十種常見的無益思考慣性',
+          bucketsIntro: '念頭往往只是習慣，不一定是事實。看見常見的思考慣性，不代表你的感受不合理，只是在「發生的事」與「大腦補上的故事」之間，多留一點呼吸的空間。',
           bucketsSub: '點選任一圖卡即可選取，並於下方展開說明與日常例子。',
           spotlightHint: '點選上方任一圖卡，即可查看詳細說明與例子。',
           orDivider: '或',
@@ -2119,9 +2121,10 @@
               </div>
 
               <div class="bg-mist/60 border border-border rounded-2xl p-4 sm:p-5 space-y-4">
-                <div>
+                <div class="space-y-1.5">
                   <h3 class="text-base font-semibold text-ink">${te.bucketsTitle}</h3>
-                  <p class="text-sm text-ink-muted mt-0.5">${te.bucketsSub}</p>
+                  <p class="text-sm text-ink/90 leading-relaxed">${te.bucketsIntro}</p>
+                  <p class="text-xs sm:text-sm text-ink-muted pt-0.5">${te.bucketsSub}</p>
                 </div>
 
                 <!-- 10 Compact Illustrated Tiles (2-col mobile, 5-col desktop) -->
